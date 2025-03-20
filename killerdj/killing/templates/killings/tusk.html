@@ -1,0 +1,10 @@
+{% extends "killings/laid.html" %}
+
+{% block body %}
+    <ol>
+        {% for tusk in tusks %}
+            <li>{{ tusk }}</li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'killing:confessionary' %}">Burn more</a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "killings/laid.html" %}
+
+{% block body %}
+    <h3>Burn your guilt:</h3>
+    <div>
+        <form action="{% url 'killing:confessionary' %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit"
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'killing:tusk' %}">See the ashes</a>
+    </div>    
+{% endblock %}
